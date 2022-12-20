@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap4-notify": "^4.0.3",
+    "sweetalert2": "^11.4.17"
+  }
+}
