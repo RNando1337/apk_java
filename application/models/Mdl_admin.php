@@ -24,11 +24,11 @@ class Mdl_admin extends CI_Model
     {
         if (isset($kode)) {
             if ($kode == 1) {
-                return "Budaya Jawa Tengah";
+                return "Batik";
             } else if ($kode == 2) {
-                return "Budaya Jawa Barat";
+                return "Rumah Adat";
             } else if ($kode == 3) {
-                return "Budaya Jawa Timur";
+                return "Pakaian";
             }
         } else {
             return "";
@@ -146,30 +146,27 @@ class Mdl_admin extends CI_Model
     public function count_filter_budaya($search)
     {
         if (
-            strcmp(strtolower($search), "budaya jawa tengah") == 0
-            || strcmp(strtolower($search), "budaya jawa te") == 0
-            || (strcmp(strtolower($search), "budaya jawa tengah") <= 4
-                && strcmp(strtolower($search), "budaya jawa tengah") > 0)
+            strcmp(strtolower($search), "batik") == 0
+            || strcmp(strtolower($search), "bat") == 0
+            || (strcmp(strtolower($search), "bati") <= 4
+                && strcmp(strtolower($search), "batik") > 0)
         ) {
             $search = 1;
         } else if (
-            strcmp(strtolower($search), "budaya jawa barat") == 0
-            || (strcmp(strtolower($search), "budaya jawa barat") <= 4
-                && strcmp(strtolower($search), "budaya jawa barat") > 0)
+            strcmp(strtolower($search), "rumah adat") == 0
+            || (strcmp(strtolower($search), "rumah ad") <= 4
+                && strcmp(strtolower($search), "rumah adat") > 0)
         ) {
             $search = 2;
         } else if (
-            strcmp(strtolower($search), "budaya jawa timur") == 0
-            || strcmp(strtolower($search), "budaya jawa ti") == 0
-            || (strcmp(strtolower($search), "budaya jawa timur") <= 3
-                && strcmp(strtolower($search), "budaya jawa timur") > 0)
+            strcmp(strtolower($search), "pakaian") == 0
+            || strcmp(strtolower($search), "pakai") == 0
+            || (strcmp(strtolower($search), "pakaian") <= 3
+                && strcmp(strtolower($search), "pakaian") > 0)
         ) {
             $search = 3;
-        } else if ((strcmp(strtolower($search), "budaya jawa ") <= 1
-            && strcmp(strtolower($search), "budaya jawa ") >= 0)) {
+        } else {
             $search = "1 || 2 || 3";
-        } else if (strcmp(strtolower($search), "budaya jawa t") == 0) {
-            $search = "1 || 3";
         }
 
         $this->db->like('judul', $search);
@@ -181,30 +178,27 @@ class Mdl_admin extends CI_Model
     public function filterbudaya($search, $limit = "", $start = "", $order_field = "", $order_ascdesc = "")
     {
         if (
-            strcmp(strtolower($search), "budaya jawa tengah") == 0
-            || strcmp(strtolower($search), "budaya jawa te") == 0
-            || (strcmp(strtolower($search), "budaya jawa tengah") <= 4
-                && strcmp(strtolower($search), "budaya jawa tengah") > 0)
+            strcmp(strtolower($search), "batik") == 0
+            || strcmp(strtolower($search), "bat") == 0
+            || (strcmp(strtolower($search), "bati") <= 4
+                && strcmp(strtolower($search), "batik") > 0)
         ) {
             $search = 1;
         } else if (
-            strcmp(strtolower($search), "budaya jawa barat") == 0
-            || (strcmp(strtolower($search), "budaya jawa barat") <= 4
-                && strcmp(strtolower($search), "budaya jawa barat") > 0)
+            strcmp(strtolower($search), "rumah adat") == 0
+            || (strcmp(strtolower($search), "rumah ad") <= 4
+                && strcmp(strtolower($search), "rumah adat") > 0)
         ) {
             $search = 2;
         } else if (
-            strcmp(strtolower($search), "budaya jawa timur") == 0
-            || strcmp(strtolower($search), "budaya jawa ti") == 0
-            || (strcmp(strtolower($search), "budaya jawa timur") <= 3
-                && strcmp(strtolower($search), "budaya jawa timur") > 0)
+            strcmp(strtolower($search), "pakaian") == 0
+            || strcmp(strtolower($search), "pakai") == 0
+            || (strcmp(strtolower($search), "pakaian") <= 3
+                && strcmp(strtolower($search), "pakaian") > 0)
         ) {
             $search = 3;
-        } else if ((strcmp(strtolower($search), "budaya jawa ") <= 1
-            && strcmp(strtolower($search), "budaya jawa ") >= 0)) {
+        } else {
             $search = "1 || 2 || 3";
-        } else if (strcmp(strtolower($search), "budaya jawa t") == 0) {
-            $search = "1 || 3";
         }
 
         $this->db->like('judul', $search);

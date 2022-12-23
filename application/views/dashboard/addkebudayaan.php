@@ -54,9 +54,9 @@
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Kategori Budaya</label>
                                         <select class="form-control" id="kategoribudaya">
-                                            <option value="1">Budaya Jawa Tengah</option>
-                                            <option value="2">Budaya Jawa Barat</option>
-                                            <option value="3">Budaya Jawa Timur</option>
+                                            <option value="1">Batik</option>
+                                            <option value="2">Rumah Adat</option>
+                                            <option value="3">Pakaian</option>
                                         </select>
                                     </div>
 

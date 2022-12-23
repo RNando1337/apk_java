@@ -52,8 +52,8 @@ class Admin extends CI_Controller
 
     public function dashboard()
     {
+        $this->output->delete_cache();
         if ($this->session->has_userdata('username')) {
-            $this->output->delete_cache();
             $this->load->view('dashboard/dashboard');
         } else {
             echo "Akses Ditolak";
@@ -142,7 +142,7 @@ class Admin extends CI_Controller
                         'id' => $id
                     )
                 );
-                $selects = array("Budaya Jawa Tengah", "Budaya Jawa Barat", "Budaya Jawa Timur");
+                $selects = array("Batik", "Rumah Adat", "Pakaian");
                 $data = array(
                     'id' => $id,
                     'budaya' => $budaya,

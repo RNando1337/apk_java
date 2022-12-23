@@ -24,11 +24,11 @@ class Mdl_homepage extends CI_Model
     public function kategori_kebudayaan($jenis_budaya)
     {
         if ($jenis_budaya == 1) {
-            return "Budaya Jawa Tengah";
+            return "Batik";
         } else if ($jenis_budaya == 2) {
-            return "Budaya Jawa Barat";
+            return "Rumah Adat";
         } else if ($jenis_budaya == 3) {
-            return "Budaya Jawa Timur";
+            return "Pakaian";
         } else {
             return "Kategori Budaya Tidak Ada";
         }
